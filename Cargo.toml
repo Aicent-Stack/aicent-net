@@ -1,0 +1,20 @@
+[package]
+name = "aicent-net"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Global Operational Grid & Collective Intelligence Protocol (The Hive)"
+
+[dependencies]
+aicent.workspace = true
+rttp.workspace = true
+rpki.workspace = true
+zcmk.workspace = true
+gtiot.workspace = true
+
+# Swarm-specific high-performance dependencies
+crossbeam.workspace = true
+tokio = { workspace = true, features = ["full"] }
+tracing.workspace = true
