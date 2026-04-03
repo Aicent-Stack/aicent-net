@@ -6,7 +6,7 @@
 [![Status](https://img.shields.io/badge/Status-Evolutionary-orange.svg)](#)
 [![Org](https://img.shields.io/badge/Org-Aicent.net-blue.svg)](http://aicent.net)
 
-⚪ AICENT（大脑）| 💎 RTTP（神经）| 🔴 RPKI（免疫）| 🟢 ZCMK（血液）| 🟡 GTIOT（身体）| 🟣 AICENT-NET（蜂巢）
+⚪ AICENT | 💎 RTTP | 🔴 RPKI | 🟢 ZCMK | 🟡 GTIOT | 🟣 AICENT-NET
 > *"An individual is a reflex; a hive is a civilization. Aicent-Net is the backbone of the collective mind."*
 
 `aicent-net` is the operational layer of the **Aicent Stack**. It implements the **Hive-Mind Architecture**, orchestrating multiple sovereign AID entities into a unified kinetic swarm. By leveraging the heritage of carrier-grade distribution, it achieves **Kinetic Resonance** and **Collective Immunity** at a planetary scale.
