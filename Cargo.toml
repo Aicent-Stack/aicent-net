@@ -1,43 +1,22 @@
 [package]
 name = "aicent-net"
-description = "AICENT-NET: Global Operational Grid and Collective Intelligence Protocol [RFC-006]"
+description = "AICENT-NET: Global Operational Grid Protocol [RFC-006]"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage = "https://aicent.net"
-documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md"
-keywords = ["swarm-intelligence", "hive-mind", "rfc-006", "planetary-scale", "operational-grid"]
-categories = ["network-programming", "distributed-computing", "science"]
 
 [dependencies]
-# --- The Integrated Organism (Full Workspace Alignment) ---
-# Aicent-Net orchestrates the interaction between all other domains.
 aicent.workspace = true
 rttp.workspace = true
 rpki.workspace = true
 zcmk.workspace = true
 gtiot.workspace = true
-
-# --- Hive Orchestration & Collective Logic ---
-# Essential for the HiveMind trait and collective state shunting.
-async-trait = "0.1"           
-serde = { workspace = true, features = ["derive"] }
-crossbeam.workspace = true     # Lock-free coordination between AID nodes
-parking_lot.workspace = true   # High-performance sync for the global state manifold
-
-# --- High-Throughput Grid Telemetry ---
+async-trait.workspace = true
+serde.workspace = true
+crossbeam.workspace = true
+parking_lot.workspace = true
 tokio = { workspace = true, features = ["full"] }
-tracing.workspace = true      # Planetary-scale hive telemetry
-futures = "0.3"               # Advanced stream handling for swarm synchronization
-
-[features]
-default = ["std"]
-std = ["aicent/std", "rttp/std", "rpki/std"]
-# [RFC-006] Enable Project SWARM: Kinetic resonance and collective defense.
-swarm = []
-
-[dev-dependencies]
-# Performance benchmarking for Collective Finality targets (<100µs)
-criterion = "0.5"
+tracing.workspace = true
+futures.workspace = true
