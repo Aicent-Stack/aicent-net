@@ -40,13 +40,6 @@ serde  = { workspace = true, features = ["derive"] }
 anyhow = { workspace = true }
 tracing = { workspace = true } # For planetary-scale event stream auditing
 
-[features]
-default = ["std"]
-# [Standard v1.0] Support for high-end backbone dispatchers
-std = ["serde/std", "anyhow/std", "aicent/std", "rttp/std"]
-# [RFC-006] Enable experimental swarm kinetic resonance simulations (v0.3.0 Preview)
-swarm-simulation = []
-
 [dev-dependencies]
 # Performance auditing for Collective Finality targets (<100µs)
 criterion = { workspace = true }
