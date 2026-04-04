@@ -10,7 +10,7 @@ homepage = "http://aicent.net"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md"
 keywords = ["hive-mind", "swarm-intelligence", "rfc-006", "operational-grid", "128-bit-atomic"]
 categories = ["distributed-computing", "network-programming", "science"]
-rust-version = "1.75"
+rust-version = "1.85"
 
 [dependencies]
 # --- Full-Spectrum Domain Orchestration ---
