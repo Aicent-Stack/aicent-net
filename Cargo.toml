@@ -1,20 +1,20 @@
 [package]
 name = "aicent-net"
-description = "AICENT-NET: Global Operational Grid & Collective Intelligence Protocol [RFC-006]"
+description = "AICENT-NET: Global Operational Grid and Collective Intelligence Protocol [RFC-006]"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-homepage = "https://aicent.net"
+homepage = "http://aicent.net"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md"
-keywords = ["swarm-intelligence", "hive-mind", "rfc-006", "planetary-scale", "grid-orchestration"]
+keywords = ["hive-mind", "swarm-intelligence", "rfc-006", "operational-grid", "128-bit-atomic"]
 categories = ["distributed-computing", "network-programming", "science"]
 rust-version = "1.75"
 
 [dependencies]
-# --- Full-Spectrum Domain Integration ---
-# The Hive orchestrates all five lower domains to achieve planetary consensus.
+# --- Full-Spectrum Domain Orchestration ---
+# The Hive orchestrates all five individual domains to achieve planetary consensus.
 aicent = { workspace = true }
 rttp   = { workspace = true }
 rpki   = { workspace = true }
@@ -22,28 +22,31 @@ zcmk   = { workspace = true }
 gtiot  = { workspace = true }
 
 # --- Planetary Orchestration & Grid Logic ---
-# High-concurrency traits and async streams for hive-wide resonance.
-async-trait.workspace = true
+# High-concurrency traits and async streams for collective resonance.
+async-trait = { workspace = true }
 futures     = { workspace = true }
 tokio       = { workspace = true, features = ["full"] }
 
-# --- Grid-Scale Coordination ---
+# --- Distributed Coordination & Memory Manifold ---
 # [PERF] Lock-free primitives for massive state manifold synchronization.
+# Utilizes 128-bit atomicity to ensure zero-data-tearing in global snapshots.
 crossbeam         = { workspace = true }
 crossbeam-channel = { workspace = true }
-parking_lot       = { workspace = true } # HFT-grade synchronization
-once_cell         = { workspace = true } # Global manifold singleton
+parking_lot       = { workspace = true } # HFT-grade synchronization for the grid
+once_cell         = { workspace = true } # Global state manifold initialization
 
-# --- Telemetry & Diagnostics ---
+# --- Data, Telemetry & Diagnostics ---
 serde  = { workspace = true, features = ["derive"] }
 anyhow = { workspace = true }
 tracing = { workspace = true } # For planetary-scale event stream auditing
 
 [features]
 default = ["std"]
-std = ["serde/std", "anyhow/std"]
-# [RFC-006] Enable experimental swarm kinetic resonance simulations
-swarm = []
+# [Standard v1.0] Support for high-end backbone dispatchers
+std = ["serde/std", "anyhow/std", "aicent/std", "rttp/std"]
+# [RFC-006] Enable experimental swarm kinetic resonance simulations (v0.3.0 Preview)
+swarm-simulation = []
 
 [dev-dependencies]
-criterion = "0.5" # Auditing the grid finality targets
+# Performance auditing for Collective Finality targets (<100µs)
+criterion = { workspace = true }
