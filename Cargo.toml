@@ -1,25 +1,49 @@
 [package]
 name = "aicent-net"
-description = "AICENT-NET: Global Operational Grid and Collective Intelligence Protocol [RFC-006]"
+description = "AICENT-NET: Global Operational Grid & Collective Intelligence Protocol [RFC-006]"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage = "https://aicent.net"
+documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md"
+keywords = ["swarm-intelligence", "hive-mind", "rfc-006", "planetary-scale", "grid-orchestration"]
+categories = ["distributed-computing", "network-programming", "science"]
+rust-version = "1.75"
 
 [dependencies]
-aicent.workspace = true
-rttp.workspace = true
-rpki.workspace = true
-zcmk.workspace = true
-gtiot.workspace = true
+# --- Full-Spectrum Domain Integration ---
+# The Hive orchestrates all five lower domains to achieve planetary consensus.
+aicent = { workspace = true }
+rttp   = { workspace = true }
+rpki   = { workspace = true }
+zcmk   = { workspace = true }
+gtiot  = { workspace = true }
 
-# --- Planetary Orchestration ---
+# --- Planetary Orchestration & Grid Logic ---
+# High-concurrency traits and async streams for hive-wide resonance.
 async-trait.workspace = true
-serde.workspace = true
-crossbeam.workspace = true
-parking_lot.workspace = true
-once_cell.workspace = true
-tokio = { workspace = true, features = ["full"] }
-tracing.workspace = true
-futures.workspace = true
+futures     = { workspace = true }
+tokio       = { workspace = true, features = ["full"] }
+
+# --- Grid-Scale Coordination ---
+# [PERF] Lock-free primitives for massive state manifold synchronization.
+crossbeam         = { workspace = true }
+crossbeam-channel = { workspace = true }
+parking_lot       = { workspace = true } # HFT-grade synchronization
+once_cell         = { workspace = true } # Global manifold singleton
+
+# --- Telemetry & Diagnostics ---
+serde  = { workspace = true, features = ["derive"] }
+anyhow = { workspace = true }
+tracing = { workspace = true } # For planetary-scale event stream auditing
+
+[features]
+default = ["std"]
+std = ["serde/std", "anyhow/std"]
+# [RFC-006] Enable experimental swarm kinetic resonance simulations
+swarm = []
+
+[dev-dependencies]
+criterion = "0.5" # Auditing the grid finality targets
