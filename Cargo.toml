@@ -1,6 +1,6 @@
 [package]
 name = "aicent-net"
-description = "AICENT-NET: Global Operational Grid Protocol [RFC-006]"
+description = "AICENT-NET: Global Operational Grid and Collective Intelligence Protocol [RFC-006]"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -13,10 +13,13 @@ rttp.workspace = true
 rpki.workspace = true
 zcmk.workspace = true
 gtiot.workspace = true
+
+# --- Planetary Orchestration ---
 async-trait.workspace = true
 serde.workspace = true
 crossbeam.workspace = true
 parking_lot.workspace = true
+once_cell.workspace = true
 tokio = { workspace = true, features = ["full"] }
 tracing.workspace = true
 futures.workspace = true
