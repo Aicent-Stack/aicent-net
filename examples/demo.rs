@@ -63,7 +63,7 @@ fn main() {
     println!("\n\x1b[1;35m======================= AICENT-NET REPORT =======================\x1b[0m");
     println!("⏱️  Collective Finality Latency: {:?}", total_duration);
     println!("⏱️  Kinetic Resonance Offset:   {:?}", resonance_latency);
-    println!("🛡️  Quorum Defense Resolution: < 100µs (Collective RPKI)");
+    println!("🛡️  Quorum Defense Resolution:  < 100µs (Collective RPKI)");
     println!("📡 Operational Authority:      Aicent.net Original Coordinates");
     println!("✅ Conclusion: Planetary grid stable. Collective intelligence active.");
     println!("   Protocol Version: 0.3.0-evolution-draft");
