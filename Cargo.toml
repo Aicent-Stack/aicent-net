@@ -2,33 +2,32 @@
 name = "aicent-net"
 description = "AICENT-NET: Global Operational Grid and Collective Intelligence Protocol [RFC-006]"
 version.workspace = true
-edition = "2024" # Explicitly set edition to 2024 for consistency
-authors = ["Aicent Stack Team <lee@aicent.com>"]
-license = "Apache-2.0"
-repository = "https://github.com/Aicent-Stack/aicent-net" # Point to its own independent repository
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository = "https://github.com/Aicent-Stack/aicent-net" # Points to its own independent repository
 homepage = "http://aicent.net"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md"
 keywords = ["hive-mind", "swarm-intelligence", "rfc-006", "operational-grid", "128-bit-atomic", "carrier-grade"]
 categories = ["distributed-computing", "network-programming", "science"]
-rust-version = "1.85" # Explicitly set rust-version to 1.85 for consistency
+rust-version.workspace = true
 
 [dependencies]
 # --- Full-Spectrum Domain Orchestration (Unidirectional Dependency Flow) ---
 # The Hive orchestrates all five individual domains to achieve planetary consensus.
-# All dependencies explicitly enable their 'std' feature for full compatibility.
-aicent = { workspace = true, features = ["std"] }
-rttp   = { workspace = true, features = ["std"] }
-rpki   = { workspace = true, features = ["std"] }
-zcmk   = { workspace = true, features = ["std"] }
-gtiot  = { workspace = true, features = ["std"] }
+aicent = { workspace = true }
+rttp   = { workspace = true }
+rpki   = { workspace = true }
+zcmk   = { workspace = true }
+gtiot  = { workspace = true }
 
 # --- Planetary Orchestration & Grid Logic ---
 async-trait = { workspace = true }
-futures     = { workspace = true } # High-throughput stream handling for global state synchronization
-tokio       = { workspace = true, features = ["full"] }
+futures     = { workspace = true }
 
 # --- Distributed Coordination & Memory Manifold ---
-# [PERF] Lock-free primitives for massive state manifold synchronization (128-bit atomicity).
+# [PERF] Lock-free primitives for massive state manifold synchronization.
+# Utilizes 128-bit atomicity to ensure zero-data-tearing in global snapshots.
 crossbeam         = { workspace = true }
 crossbeam-channel = { workspace = true }
 parking_lot       = { workspace = true } # HFT-grade synchronization for grid consensus
@@ -37,15 +36,22 @@ once_cell         = { workspace = true } # Global state manifold initialization
 # --- Data, Telemetry & Diagnostics ---
 serde  = { workspace = true, features = ["derive"] }
 anyhow = { workspace = true }
-tracing = { workspace = true } # For planetary-scale event stream auditing
+tracing = { workspace = true } # Planetary-scale telemetry for hive events
+tokio   = { workspace = true } # Core asynchronous runtime
 
 [features]
 default = ["std"]
 # [Standard v1.0] Standard library support for high-end backbone dispatchers.
-# Explicitly re-exporting 'std' for all foundational dependencies.
-std = ["serde/std", "anyhow/std", "aicent/std", "rttp/std", "rpki/std", "zcmk/std", "gtiot/std", "tokio/full"]
+# Explicitly re-exporting 'std' for foundational Aicent Stack dependencies.
+std = [
+    "aicent/std",
+    "rttp/std",
+    "rpki/std",
+    "zcmk/std",
+    "gtiot/std"
+]
 
-# [RFC-006] Feature flag to enable experimental swarm kinetic resonance simulations (v0.3.0 Preview).
+# [RFC-006] Enable experimental swarm kinetic resonance simulations (v0.3.0 Preview).
 swarm-simulation = []
 
 [dev-dependencies]
