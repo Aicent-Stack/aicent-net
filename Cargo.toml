@@ -12,7 +12,7 @@ documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-00
 rust-version.workspace = true
 
 # Keywords and categories for planetary-scale hive authority
-keywords = ["hive-mind", "swarm-intelligence", "rfc-006", "operational-grid", "128-bit-atomic", "planetary-scale"]
+keywords = ["hive-mind", "swarm-intelligence", "rfc-006", "operational-grid", "128-bit-atomic", "carrier-grade"]
 categories = ["distributed-computing", "network-programming", "science", "high-performance"]
 
 [dependencies]
@@ -32,9 +32,10 @@ futures     = { workspace = true } # Stream handling for global state synchroniz
 tokio       = { workspace = true, features = ["full"] }
 
 # --- Distributed Coordination & 128-bit Manifold ---
-# [PERF] Utilizing 128-bit atomics to ensure zero-data-tearing in global snapshots.
-# Essential for tracking total grid GFLOPS and node reputation in a single cycle.
-crossbeam         = { workspace = true }
+# [PERF] Utilizing 128-bit hardware atomicity to ensure zero-data-tearing in global snapshots.
+# Essential for tracking total grid GFLOPS and node reputation in a single instruction.
+crossbeam         = { workspace = true } # REQUIRED for AtomicCell<u128> support
+crossbeam-channel = { workspace = true } # High-frequency inter-node messaging
 parking_lot       = { workspace = true } # HFT-grade synchronization for grid state
 once_cell         = { workspace = true } # Safe static initialization of the grid backbone
 
@@ -48,8 +49,7 @@ tracing = { workspace = true } # For planetary-scale event stream auditing
 default = ["std"]
 
 # [Standard v1.0] Standard library support for the global operational grid.
-# 🛡️ FIX: Explicitly excluded 'smallvec/std' to prevent compilation deadlock.
-# Re-exports 'std' for all foundational dependencies to maintain homeostasis.
+# Explicitly re-exporting 'std' for all foundational dependencies to maintain homeostasis.
 std = [
     "serde/std", 
     "anyhow/std", 
@@ -62,6 +62,7 @@ std = [
 ]
 
 # [RFC-006] Enable experimental swarm kinetic resonance simulations (v0.3.0 Preview).
+# This activates advanced algorithms for robotic swarm formation control.
 swarm-simulation = []
 
 [dev-dependencies]
