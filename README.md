@@ -4,15 +4,14 @@
 [![Status](https://img.shields.io/badge/Status-Evolutionary-orange.svg)](#)
 [![Org](https://img.shields.io/badge/Org-Aicent.net-blue.svg)](http://aicent.net)
 
+**⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🌿 [epoekie](http://epoekie.com)**
+
 Aicent Stack • Sovereign AI Nervous System
 
 # 🟣 aicent-net — The Hive of Aicent Stack
 
 **Global Operational Grid & Collective Intelligence Protocol [RFC-006]**
 > *"The individual is the pulse; the Hive is the heartbeat. Aicent.net doesn't just connect; it orchestrates the planetary resonance of sovereign intelligence."*
-
-**⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🌿 [epoekie](http://epoekie.com)**
-
 ---
 
 ## 🌐 Orchestrating the Planetary Grid
