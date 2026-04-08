@@ -4,6 +4,8 @@
 [![Status](https://img.shields.io/badge/Status-Evolutionary-orange.svg)](#)
 [![Org](https://img.shields.io/badge/Org-Aicent.net-blue.svg)](http://aicent.net)
 
+Aicent Stack • Sovereign AI Nervous System
+
 # 🟣 aicent-net — The Hive of Aicent Stack
 
 **Global Operational Grid & Collective Intelligence Protocol [RFC-006]**
