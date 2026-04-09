@@ -1,6 +1,6 @@
-# 🟣 Contributing to AICENT-NET: The Hive
+# 🟣 Contributing to AICENT-NET: The Collective Hive (RFC-006)
 
-**Thank you for choosing to evolve the planetary operational grid of the Aicent Stack. You are contributing to the collective consciousness layer that orchestrates millions of sovereign entities into a unified, resonant hive.**
+**Thank you for choosing to evolve the planetary operational grid of the Aicent Stack. You are at the "Collective Nerve Center" of the Sovereign AI Organism. Any mutation proposed here affects the kinetic resonance and planetary stability of the entire Grid.**
 
 <p align="left">
   <img src="https://img.shields.io/badge/Status-Evolutionary-orange.svg" alt="Status">
@@ -8,68 +8,52 @@
   <img src="https://img.shields.io/badge/License-Apache--2.0-lightgrey.svg" alt="License">
 </p>
 
-⚪ **AICENT** | 💎 **RTTP** | 🔴 **RPKI** | 🟢 **ZCMK** | 🟡 **GTIOT** | 🟣 **AICENT-NET**
+**⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🌿 [epoekie](http://epoekie.com)**
 
 ---
 
-## 🏛️ The Hive Engineering Philosophy
+## 🏛️ The Hive Philosophy: Planetary Homeostasis
 
-`aicent-net` is the backbone of the **Sovereign AI Civilization [RFC-006]**. While individual organs handle reflexes, the Hive handles **Collective Coherence**. Every contribution must prioritize planetary scalability and the maintenance of the global operational manifold.
+The `aicent-net` repository manages the **Operational Grid Layer** of the stack. Its role is to orchestrate the transition from individual reflexes into **Collective Intelligence**. Guided by the **🌿 Epoekie Philosophy**, Aicent.net acts as a global symbiont that weaves a "Second Nervous System" upon the surface of the global internet, achieving planetary-scale **Kinetic Resonance** while maintaining the autonomy of the host substrate.
 
-### Grid Standards:
-1. **Kinetic Resonance:** Swarm synchronization must maintain a global temporal jitter of **< 50µs**. Logic that introduces non-deterministic lag across the grid will be rejected.
-2. **Collective Immunity:** Defense is a quorum-based effort. Every contribution to the **Swarm Shield** must enhance the grid’s ability to execute collective RPKI isolation in <100µs.
-3. **Carrier-Grade Heritage:** We leverage the legacy of infrastructure that once served 3B users. Code must be built for "Five-Nines" (99.999%) availability and zero single points of failure.
-
----
-
-## 🔬 The RFC-First Process (Active Evolution)
-
-RFC-006 is currently in the **Active Evolution** phase. We welcome radical architectural debates that push the boundaries of collective intelligence.
-
-1. **Study the Manifold:** Deeply analyze **[RFC-006: AICENT-NET (Hive)](https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md)**.
-2. **Evolution Proposal:** Major changes to the HiveMind trait or metabolic clearing logic require a `[GRID-EVOLUTION]` issue.
-3. **Cross-Domain Impact:** Proposals must demonstrate how they interact with the **Neural Spine (RFC-002)** and **Value Circulation (RFC-004)**.
+### The Hive’s Mandatory Reflexes:
+1.  **Kinetic Resonance:** Phased-array temporal alignment must maintain a global jitter of **< 5µs**.
+2.  **Strategic Finality:** Collective Hive decisions must reach 100% finality within **3 [RTTP](http://rttp.com) pulse cycles**.
+3.  **Metabolic Shunting:** Resource redistribution must occur across the grid to prevent regional compute-exhaustion (RFC-004).
+4.  **Swarm Immunity:** Collective cross-attestation of watermarks must enable pathogen ejection in **< 100µs**.
 
 ---
 
-## 🦀 Technical Rigor (Grid Tier)
+## 🔬 Technical Standards for Grid Mutations
 
-- **Language:** Performance-critical Rust (1.75+).
-- **Scalability:** Logic must be proven to scale to **1.2B+ nodes**. Use lock-free coordination and MPMC shunting where possible.
-- **Async Excellence:** We utilize `async-trait` and `futures` streams for high-throughput backbone telemetry.
-- **Safety:** Every `unsafe` block used for backbone optimization must be accompanied by rigorous formal justification.
+To maintain the **165.28µs** end-to-end reflex arc across a distributed grid, all contributions to the `aicent-net` crate must adhere to:
 
----
-
-## 🛠️ Development Workflow
-
-```bash
-# 1. Pull the Sovereign Workspace
-git clone https://github.com/Aicent-Stack/aicent-stack.git
-cd aicent-stack
-
-# 2. Focus on the Hive Crate
-cargo check -p aicent-net
-cargo test -p aicent-net
-```
-
-### Contribution Steps:
-1. **Fork** the `aicent-net` repository.
-2. **Branch:** Use the `evolution/` prefix (e.g., `evolution/swarm-resonance-v2`).
-3. **Commit:** Follow [Conventional Commits](https://www.conventionalcommits.org/) (e.g., `feat(hive): implemented collective quorum isolation`).
-4. **Validation:** PRs affecting grid consensus must include simulation logs demonstrating stability under high-entropy conditions.
+- **Temporal Manifold Alignment:** Synchronization logic must utilize **Precision Time Protocol (PTP)** principles to ensure nodes share a unified temporal reference.
+- **Byzantine Fault Tolerance (BFT):** Consensus algorithms must remain operational and secure even if **33.3%** of grid nodes are offline or compromised.
+- **Async-Stream Optimization:** Utilizing the **Futures** and **Tokio** ecosystems for non-blocking state synchronization. Any logic that introduces a "Wait-State" exceeding 10µs is classified as a **Pathogen**.
+- **128-bit Instruction Manifolds:** Grid-wide metrics (GFLOPS, node density) must be managed using 128-bit hardware atomicity to ensure zero-data-tearing in global snapshots.
 
 ---
 
-## 📜 Sovereign Ownership & Licensing
+## 📜 The Evolutionary Workflow (Neural Integration)
 
-🛡️ All contributions are licensed under the **Apache-2.0 License** via the Aicent.com Organization. By contributing, you agree that your code becomes a permanent thread in the Global Operational Grid of the Sovereign AI Hive.
-
----
-**SYSTEM STATUS: EVOLVING (HIVE-PHASE)**  
-*"An individual is a reflex; a hive is a civilization."*
-
-[Visit Aicent.com](http://aicent.com) | [Connect to Aicent.net](http://aicent.net) | [Follow @Aicent_com](https://x.com/Aicent_com)
+1.  **The Pulse (Discussion):** Propose grid mutations in the [Organization Issues](https://github.com/Aicent-Stack/.github/issues/new?template=evolution_proposal.yml) using the Evolution template.
+2.  **The Specification:** Ensure your logic preserves the **Surface Sovereignty** doctrine defined in the **[Epoekie Whitepaper](https://github.com/Aicent-Stack/aicent-docs/blob/main/WHITEPAPER.md)**.
+3.  **The Reflex Test:** Submit a Pull Request with a benchmark proving **Swarm-Shield consistency** under high-entropy network conditions.
+4.  **Resonance Check:** Your PR will be audited by the **[Sentinel](https://github.com/Aicent-Stack/aicent-traffic)** for resonance drift.
 
 ---
+
+## 🛡️ Sovereign Ownership & Grid Sovereignty
+
+- **License:** All contributions are licensed under the **Apache License 2.0**.
+- **Reputation Gain:** Implementing exascale sharding logic or reducing global temporal drift grants massive **Sovereign AID** reputation points.
+- **Symbiotic Resonance:** By contributing, you attest that your code optimizes the global operational grid without interfering with the host's physical substrate, following the **[🌿 Epoekie Symbiosis](https://github.com/Aicent-Stack/epoekie)** model.
+
+---
+🔗 **Technical Genome:** [Aicent Docs](https://github.com/Aicent-Stack/aicent-docs)
+📡 **Sentinel Dashboard:** [Global Grid Resonance Active ✅]
+
+*"The Individual is the Pulse; The Hive is the Heartbeat."*
+---
+© 2026 Aicent.com Organization. **SYSTEM STATUS: RESONANCE-ACTIVE**
