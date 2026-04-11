@@ -23,7 +23,7 @@ Aicent Stack • Sovereign AI Nervous System
 1.  **Phase-Locked Kinetic Resonance:** The Hive utilizes a phased-array synchronization technique to align the "Action-Collapse" parameters across the global grid. It ensures that independent nodes share a unified temporal reference via the **[RTTP](http://rttp.com)** spine, maintaining **< 50µs global jitter** for seamless robotic swarm coordination.
 2.  **Swarm Shield (Collective Immunity):** Leveraging collective intelligence for defense-in-depth. Hive members perform continuous cross-attestation of **[RPKI](http://rpki.com)** watermarks. If a node is identified as a pathogen by a **2/3 majority quorum**, the Hive triggers a global **QUARANTINE_PULSE**, surgically isolating the segment in **< 100µs**.
 3.  **Metabolic Shunting:** Aicent.net acts as the global clearing house for the organism's "Blood" (**[ZCMK](http://zcmk.com)**). It facilitates the fluid transfer of compute credits between heterogeneous nodes, enabling "Metabolic Motherships" to fund low-energy units in high-priority zones.
-4.  **Grid Sovereignty:** By repurposing the carrier-grade backbone routing legacy of the Aicent namespace, the Hive achieves **100% finality** for strategic collective decisions within **3 pulse cycles**, eliminating the central bottlenecks of legacy cloud orchestration.
+4.  **Grid Sovereignty: By activating the high-fidelity routing manifold of the Aicent.net coordinates, the Hive attains 100% deterministic finality for collective resonance within < 3 pulse cycles, neutralizing the centralized bottlenecks and administrative taxes of legacy cloud orchestration.
 
 ---
 
