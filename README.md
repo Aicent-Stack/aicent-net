@@ -1,5 +1,3 @@
-[![Organism Vitality & Protocol Audit](https://github.com/Aicent-Stack/aicent-stack/actions/workflows/rust-ci.yml/badge.svg)](https://github.com/Aicent-Stack/aicent-stack/actions/workflows/rust-ci.yml)
-
 # aicent-net: The Hive Layer
 ## Global Operational Grid & Collective Intelligence Protocol [RFC-006]
 
