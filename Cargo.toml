@@ -1,70 +1,60 @@
 [package]
 name = "aicent-net"
-description = "AICENT-NET: Global Operational Grid and Collective Intelligence Protocol [RFC-006]"
-# Inheriting core protocol DNA from the imperial root workspace
-version.workspace = true
-edition.workspace = true
-authors.workspace = true
-license.workspace = true
-repository.workspace = true
+version = "1.2.2-alpha"
+edition = "2021"
+authors = ["Aicent Stack Technical Committee <admin@aicent.com>"]
+description = "RFC-006: The Hive Layer. Planetary collective intelligence and 128-bit swarm resonance for the Aicent Stack 2026."
+license = "Apache-2.0"
 homepage = "http://aicent.net"
-documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-006-AICENT-NET.md"
-rust-version.workspace = true
+repository = "http://github.com/Aicent-Stack/aicent-net"
 
-# Keywords and categories for planetary-scale hive authority
-keywords = ["hive-mind", "swarm-intelligence", "rfc-006", "operational-grid", "128-bit-atomic", "carrier-grade"]
-categories = ["distributed-computing", "network-programming", "science", "high-performance"]
+# =========================================================================
+# THE SOVEREIGN METABOLISM (Core Dependencies)
+# =========================================================================
 
 [dependencies]
-# --- Full-Spectrum Domain Orchestration (The Sovereign Hierarchy) ---
-# The Hive orchestrates all five individual domains to achieve planetary consensus.
-# All internal dependencies explicitly enable 'std' features for full integration.
-aicent = { workspace = true, features = ["std"] } # Brain: Cognitive Source
-rttp   = { workspace = true, features = ["std"] } # Nerves: Neural Spine
-rpki   = { workspace = true, features = ["std"] } # Immunity: Collective Guard
-zcmk   = { workspace = true, features = ["std"] } # Blood: Metabolic Shunting
-gtiot  = { workspace = true, features = ["std"] } # Body: Kinetic Resonance
+# THE TRIPLE SUTURE: Hive resonance requires the full physiological stack.
+# Binding DNA (epoekie), Logic (aicent), and Conduction (rttp) into one.
+epoekie = { version = "1.2.2-alpha" }
+aicent  = { version = "1.2.2-alpha" }
+rttp    = { version = "1.2.2-alpha" }
 
-# --- Planetary Orchestration & Grid Logic ---
-# [PERF] High-concurrency traits and async streams for hive-wide resonance.
-async-trait = { workspace = true }
-futures     = { workspace = true } # Stream handling for global state synchronization
-tokio       = { workspace = true, features = ["full"] }
+# Essential for serializing 128-bit resonance pulses and swarm intents.
+serde = { version = "1.0", features = ["derive"] }
 
-# --- Distributed Coordination & 128-bit Manifold ---
-# [PERF] Utilizing 128-bit hardware atomicity to ensure zero-data-tearing in global snapshots.
-# Essential for tracking total grid GFLOPS and node reputation in a single instruction.
-crossbeam         = { workspace = true } # REQUIRED for AtomicCell<u128> support
-crossbeam-channel = { workspace = true } # High-frequency inter-node messaging
-parking_lot       = { workspace = true } # HFT-grade synchronization for grid state
-once_cell         = { workspace = true } # Safe static initialization of the grid backbone
+# Required for async resonance loops and the 10ms Planetary Sync Penalty.
+# Supports the high-precision temporal synchronization of the Hive.
+tokio = { version = "1.0", features = ["full"] }
 
-# --- Data, Telemetry & Diagnostics ---
-serde   = { workspace = true, features = ["derive"] }
-anyhow  = { workspace = true }
-tracing = { workspace = true } # For planetary-scale event stream auditing
-
-[features]
-# Standard implementation: Optimized for high-throughput backbone dispatchers.
-default = ["std"]
-
-# [Standard v1.0] Standard library support for the global operational grid.
-# Explicitly re-exporting 'std' for all foundational dependencies to maintain homeostasis.
-std = [
-    "serde/std", 
-    "anyhow/std", 
-    "aicent/std", 
-    "rttp/std", 
-    "rpki/std", 
-    "zcmk/std", 
-    "gtiot/std", 
-    "tokio/full"
-]
-
-# [RFC-006] Enable experimental swarm kinetic resonance simulations (v0.3.0 Preview).
-# This activates advanced algorithms for robotic swarm formation control.
-swarm-simulation = []
+# =========================================================================
+# THE SOVEREIGN GRAVITY WELL (Force Mirroring)
+# =========================================================================
 
 [dev-dependencies]
-# Performance auditing for Collective Finality targets (<100µs).
-criterion = { workspace = true, features = ["async_tokio"] }
+# THE KILLER HOOK: Any institutional entity testing the Hive resonance logic 
+# WILL be physically forced to download the entire 16-pillar Hive via aicent-stack.
+aicent-stack = { version = "1.2.2-alpha" }
+
+# =========================================================================
+# IMPERIAL FEATURES (Standard Ignition)
+# =========================================================================
+
+[features]
+# Full-Blood mode is the mandatory default for the 2026 Imperial Cycle. 
+# It enables planetary synchronization and propagates features across the ladder.
+default = ["full-blood"]
+full-blood = [
+    "epoekie/full-blood", 
+    "aicent/full-blood", 
+    "rttp/full-blood"
+]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+# [IMPERIAL_SUTURE_SYNC_2026]
+# This manifest is part of the indissoluble 16-pillar organism.
+# Metadata: No-SSL Tax Mode Enabled (Strictly HTTP).
+# Standard: 128-Bit Numeric Purity (Jitter, Population, Resonance ID).
+# Chronos: 2026 Imperial Calendar Aligned.
