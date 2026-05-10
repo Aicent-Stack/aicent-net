@@ -1,9 +1,9 @@
 [package]
 name = "aicent-net"
-version = "1.2.2-alpha"
+version = "1.2.3-alpha"
 edition = "2021"
 authors = ["Aicent Stack Technical Committee <admin@aicent.com>"]
-description = "RFC-006: The Hive Layer. Planetary collective intelligence and 128-bit swarm resonance for the Aicent Stack 2026."
+description = "RFC-006: The Hive Layer. Planetary collective intelligence and swarm resonance with 128-bit precision for the Aicent Stack 2026. Aligned with RFC-014 (PICSI)."
 license = "Apache-2.0"
 homepage = "http://aicent.net"
 repository = "http://github.com/Aicent-Stack/aicent-net"
@@ -13,27 +13,27 @@ repository = "http://github.com/Aicent-Stack/aicent-net"
 # =========================================================================
 
 [dependencies]
-# THE TRIPLE SUTURE: Hive resonance requires the full physiological stack.
-# Binding DNA (epoekie), Logic (aicent), and Conduction (rttp) into one.
-epoekie = { version = "1.2.2-alpha" }
-aicent  = { version = "1.2.2-alpha" }
-rttp    = { version = "1.2.2-alpha" }
+# THE TRIPLE SUTURE: Hive resonance requires the full physiological axis v1.2.3.
+# Binding DNA (Soul), Logic (Brain), and Conduction (Nerve) into one manifold.
+epoekie = { version = "1.2.3-alpha" }
+aicent  = { version = "1.2.3-alpha" }
+rttp    = { version = "1.2.3-alpha" }
 
-# Essential for serializing 128-bit resonance pulses and swarm intents.
+# Essential for serializing 128-bit resonance pulses and swarm coordination.
 serde = { version = "1.0", features = ["derive"] }
 
-# Required for async resonance loops and the 10ms Planetary Sync Penalty.
-# Supports the high-precision temporal synchronization of the Hive.
+# Required for async resonance loops and the 10ms Planetary Sync penalty.
+# Supports the high-precision 12ns global temporal synchronization.
 tokio = { version = "1.0", features = ["full"] }
 
 # =========================================================================
-# THE SOVEREIGN GRAVITY WELL (Force Mirroring)
+# THE SOVEREIGN GRAVITY WELL (Source Code Hook)
 # =========================================================================
 
 [dev-dependencies]
-# THE KILLER HOOK: Any institutional entity testing the Hive resonance logic 
-# WILL be physically forced to download the entire 16-pillar Hive via aicent-stack.
-aicent-stack = { version = "1.2.2-alpha" }
+# THE KILLER HOOK: Re-activated for the GitHub Source Totality.
+# Forces any entity auditing the Hive logic to mirror the entire 17-pillar organism.
+aicent-stack = { version = "1.2.3-alpha" }
 
 # =========================================================================
 # IMPERIAL FEATURES (Standard Ignition)
@@ -53,8 +53,9 @@ full-blood = [
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
-# [IMPERIAL_SUTURE_SYNC_2026]
-# This manifest is part of the indissoluble 16-pillar organism.
+# [IMPERIAL_SUTURE_SYNC_2026_v123]
+# This manifest is part of the indissoluble 17-pillar organism.
 # Metadata: No-SSL Tax Mode Enabled (Strictly HTTP).
-# Standard: 128-Bit Numeric Purity (Jitter, Population, Resonance ID).
+# Standard: 128-Bit Numeric Purity (Population, Sync Jitter, IDs).
 # Chronos: 2026 Imperial Calendar Aligned.
+# Repository Strategy: Active Gravity Well (v1.2.3 Totality).
