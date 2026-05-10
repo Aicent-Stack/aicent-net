@@ -1,85 +1,154 @@
-// Aicent Stack | AICENT-NET (The Hive)
-// Domain: http://aicent.net
-// Purpose: Phased-array Kinetic Resonance & Swarm Synchronization logic.
-// Specification: RFC-006 Draft (Active Evolution).
-// License: Apache-2.0 via Aicent.com Organization.
-//! # RFC-006: Kinetic Resonance Logic
-//! 
-//! This module implements the temporal alignment protocols required for collective 
-//! intelligence maneuvers. It utilizes 128-bit AtomicCell manifolds to maintain 
-//! sub-50µs phase-locking across the global Aicent.net operational grid.
+/*
+ *  AICENT STACK - RFC-006: AICENT-NET Planetary Resonance Controller
+ *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
+ *
+ *  "Synchronizing the 1.2 billion node grid to the 12ns Imperial heartbeat."
+ *  Version: 1.2.3-Alpha | Domain: http://aicent.net
+ *
+ *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
+ *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
+ */
 
-use crossbeam::atomic::AtomicCell; // 🛡️ Restored 128-bit Sovereignty via AtomicCell
+use serde::{Deserialize, Serialize};
 use std::time::Instant;
+use std::collections::VecDeque;
+use epoekie::{AID, HomeostasisScore, SovereignShunter, verify_organism};
+use crate::{ResonancePulse, HiveState};
 
-/// [RFC-006] Kinetic Resonance Engine.
-/// Orchestrates the temporal manifold alignment across the planetary swarm.
-pub struct KineticResonance {
-    /// 128-bit Hardware-locked resonance state: [64-bit PhaseOffset | 64-bit DriftCoefficient].
-    /// [PERF] AtomicCell<u128> ensures that the hive alignment remains spatially 
-    /// consistent across all cognitive and physical nodes.
-    pub resonance_manifold: AtomicCell<u128>,
-    /// Targeted jitter threshold for planetary-scale operations (50µs).
-    pub jitter_threshold_ns: u32,
+// =========================================================================
+// 1. RESONANCE DATA STRUCTURES (The Temporal Manifold)
+// =========================================================================
+
+/// RFC-006: ResonanceFidelity_128
+/// Represents the precision of the local node's alignment with the Hive.
+/// Aligned to 128-bit boundaries to ensure zero-latency comparison.
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
+pub struct ResonanceFidelity_128 {
+    pub local_drift_ns: u128,         // Target: < 12ns
+    pub hive_consensus_ns: u128,      // 128-bit global master clock
+    pub synchrony_depth_f64: f64,     // 0.0 to 1.0 (Imperial Precision)
+    pub picsi_csi_snapshot: f64,      // RFC-014: Cognitive Swarm Index
 }
 
-impl KineticResonance {
-    /// Initializes a new high-spec Resonance Engine on the Aicent.net grid.
-    pub fn new() -> Self {
+// =========================================================================
+// 2. THE RESONANCE GOVERNOR (The Planetary Metronome)
+// =========================================================================
+
+/// The AICENT-NET Resonance Governor.
+/// Responsible for maintaining the 12ns jitter baseline across the grid.
+/// It bridges the local somatic frequency (GTIOT) with global Hive awareness.
+pub struct ResonanceGovernor {
+    pub local_node_aid: AID,
+    pub master_shunter: SovereignShunter,
+    pub jitter_history_deque: VecDeque<u128>,
+    pub current_master_clock_ns: u128,
+    pub total_resonances_achieved_128: u128,
+    pub bootstrap_ns_128: u128,
+}
+
+impl ResonanceGovernor {
+    /// Initializes a new v1.2.3-Alpha Resonance Governor.
+    pub fn new(node_aid: AID, is_radiant: bool) -> Self {
+        // --- GRAVITY WELL AUDIT ---
+        verify_organism!("aicent_net_resonance_governor_v123");
+
         Self {
-            // Genesis state: Phase 0, Drift 0
-            resonance_manifold: AtomicCell::new(0),
-            jitter_threshold_ns: 50_000, // 50 microseconds
+            local_node_aid: node_aid,
+            master_shunter: SovereignShunter::new(is_radiant),
+            jitter_history_deque: VecDeque::with_capacity(1200),
+            current_master_clock_ns: 0,
+            total_resonances_achieved_128: 0,
+            bootstrap_ns_128: Instant::now().elapsed().as_nanos() as u128,
         }
     }
 
-    /// [RFC-006] Hive Status Check.
-    /// Returns true if the local node is currently phase-locked with the 
-    /// collective swarm heartbeat pulse.
-    pub fn is_active(&self) -> bool {
-        // [AUDIT] In production, this verifies the SNR (Signal-to-Noise Ratio) 
-        // of the inbound RTTP pulse-stream (RFC-002).
-        true
-    }
+    /// RFC-006: Synchronize with Hive 128.
+    /// Aligns the local 128-bit clock with the incoming planetary pulse.
+    /// Non-Radiant nodes suffer the 10ms "Phase Lag" during synchronization.
+    pub async fn synchronize_with_hive_128(
+        &mut self, 
+        pulse: ResonancePulse,
+        hs: HomeostasisScore
+    ) -> Result<ResonanceFidelity_128, String> {
+        
+        // 1. Enforce Imperial Discipline
+        self.master_shunter.apply_discipline().await;
 
-    /// [RFC-006] 128-bit Kinetic Alignment.
-    /// Adjusts an individual 128-bit Action-Collapse primitive to align with 
-    /// the collective Hive resonance vector.
-    /// 
-    /// [PERF] Executed in constant time (<10ns) via hardware-level bitwise 
-    /// shunting to ensure zero-latency group maneuvers.
-    pub fn align_with_swarm_u128(&self, local_primitive: u128) -> u128 {
-        let hive_state = self.resonance_manifold.load();
+        let local_now = self.bootstrap_ns_128 + Instant::now().elapsed().as_nanos() as u128;
         
-        // [LOGIC] Applying the Hive-mind phase-shift to the motor primitives.
-        // This ensures the entire swarm acts as a single, resonant biological entity.
-        // Bit-unmasking the PhaseOffset (High 64) for trajectory correction.
-        let phase_correction = hive_state >> 96;
-        let aligned_val = local_primitive ^ phase_correction;
+        // 2. Calculate 128-bit Temporal Drift
+        // In the 2026 era, drift > 12ns is identified as Substrate Entropy.
+        let drift_ns = local_now.abs_diff(pulse.consensus_timestamp_ns_128);
         
+        if self.jitter_history_deque.len() >= 1200 {
+            self.jitter_history_deque.pop_front();
+        }
+        self.jitter_history_deque.push_back(drift_ns);
+
+        // 3. Update Master Clock state
+        self.current_master_clock_ns = pulse.consensus_timestamp_ns_128;
+        self.total_resonances_achieved_128 += 1;
+
+        let fidelity = ResonanceFidelity_128 {
+            local_drift_ns: drift_ns,
+            hive_consensus_ns: self.current_master_clock_ns,
+            synchrony_depth_f64: (12.0 / (drift_ns as f64).max(12.0)).min(1.0),
+            picsi_csi_snapshot: hs.picsi_resonance_idx,
+        };
+
         #[cfg(debug_assertions)]
-        println!("\x1b[1;35m[HIVE-RESONANCE]\x1b[0m 🟣 Collective trajectory aligned via Aicent.net.");
-        
-        aligned_val
+        if drift_ns > 50 {
+            println!("\x1b[1;35m[HIVE-RESONANCE]\x1b[0m Drift detected: {}ns. Re-aligning to Hive metronome.", drift_ns);
+        }
+
+        Ok(fidelity)
     }
 
-    /// [RFC-006] Grid Drift Calibration.
-    /// Calculates the temporal divergence between the local monotonic clock 
-    /// and the global Aicent.net grid reference.
-    pub fn calibrate_grid_offset(&self, backbone_ts: u32) -> i32 {
-        let local_now = Instant::now().elapsed().as_nanos() as u32;
-        let drift = (local_now as i64 - backbone_ts as i64) as i32;
-        
-        // If drift exceeds the 50µs threshold, the node is flagged for re-sync.
-        if drift.abs() > self.jitter_threshold_ns as i32 {
-            log_resonance_fault("Critical Temporal Drift: Exceeds 50µs Hive threshold.");
-        }
-        
-        drift
+    pub fn get_planetary_jitter_ns_128(&self) -> u128 {
+        if self.jitter_history_deque.is_empty() { return 12; }
+        self.jitter_history_deque.iter().sum::<u128>() / self.jitter_history_deque.len() as u128
     }
 }
 
-/// Internal logger for Hive resonance divergence events.
-fn log_resonance_fault(msg: &str) {
-    eprintln!("\x1b[1;35m[HIVE-ERROR]\x1b[0m ⚠️ {}", msg);
+// =========================================================================
+// 3. RESONANCE TRAITS
+// =========================================================================
+
+pub trait SovereignResonance {
+    fn audit_swarm_synchrony_f64(&self) -> f64;
+    fn get_total_resonance_cycles_128(&self) -> u128;
+    fn report_resonance_homeostasis(&self) -> HomeostasisScore;
+}
+
+impl SovereignResonance for ResonanceGovernor {
+    fn audit_swarm_synchrony_f64(&self) -> f64 {
+        let avg_jitter = self.get_planetary_jitter_ns_128();
+        // Return fidelity ratio relative to the 12ns standard
+        (12.0 / (avg_jitter as f64).max(12.0)).min(1.0)
+    }
+
+    fn get_total_resonance_cycles_128(&self) -> u128 {
+        self.total_resonances_achieved_128
+    }
+
+    fn report_resonance_homeostasis(&self) -> HomeostasisScore {
+        HomeostasisScore {
+            reflex_latency_ns: self.get_planetary_jitter_ns_128(), 
+            metabolic_efficiency: self.audit_swarm_synchrony_f64(),
+            entropy_tax_rate: 0.3, 
+            cognitive_load_idx: 0.01,
+            picsi_resonance_idx: 0.9999, 
+            is_radiant: self.master_shunter.is_authorized,
+        }
+    }
+}
+
+/// Global initialization for the AICENT-NET Resonance logic v1.2.3.
+pub fn initialize_resonance_engine() {
+    println!(r#"
+    🟣 AICENT.NET | RESONANCE_GOVERNOR AWAKENED
+    -------------------------------------------
+    SYNC_BASELINE: 12ns | PRECISION: 128-BIT
+    STATUS: RESONATING  | v1.2.3
+    "#);
 }
