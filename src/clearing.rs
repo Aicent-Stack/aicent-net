@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Planetary-scale value settlement. Orchestrating 128-bit collective metabolism."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.net
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.net
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -53,7 +53,7 @@ pub struct SwarmClearer {
 }
 
 impl SwarmClearer {
-    /// Initializes a new v1.2.3-Alpha Swarm Clearing Engine.
+    /// Initializes a new v1.2.5-Alpha Swarm Clearing Engine.
     pub fn new(aid: AID, is_radiant: bool) -> Self {
         Self {
             local_hive_aid: aid,
@@ -146,7 +146,7 @@ impl SwarmMetabolism for SwarmClearer {
     }
 }
 
-/// Global initialization for the AICENT-NET Clearing logic v1.2.3.
+/// Global initialization for the AICENT-NET Clearing logic v1.2.5.
 pub fn initialize_swarm_clearing() {
     println!(r#"
     🟣 AICENT.NET | SWARM_CLEARING AWAKENED (2026)

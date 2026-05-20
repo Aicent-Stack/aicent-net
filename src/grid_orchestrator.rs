@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "One Mind. One Billion Nodes. 12ns Resonance."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.net
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.net
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -40,7 +40,7 @@ pub struct GridStatus_128 {
 
 /// The AICENT-NET Grid Orchestrator.
 /// Coordinates global clock resonance and multi-tenant resource clearing.
-/// It maintains the 183.292us reflex arc across the 12ns planetary grid.
+/// It maintains the 161.862us reflex arc across the 12ns planetary grid.
 pub struct GridOrchestrator {
     pub local_node_aid: AID,
     pub master_shunter: SovereignShunter,
@@ -52,11 +52,11 @@ pub struct GridOrchestrator {
 }
 
 impl GridOrchestrator {
-    /// Creates a new Radiant Grid Orchestrator instance v1.2.3.
+    /// Creates a new Radiant Grid Orchestrator instance v1.2.5.
     /// Triggers the Imperial Gravity Well audit immediately.
     pub fn new(node_aid: AID, is_radiant: bool, hs: HomeostasisScore) -> Self {
         // --- GRAVITY WELL AUDIT ---
-        verify_organism!("aicent_net_grid_orchestrator_v123_totality");
+        verify_organism!("aicent_net_grid_orchestrator_v125_totality");
 
         Self {
             local_node_aid: node_aid,
@@ -131,7 +131,7 @@ pub trait GridCoordination {
 impl GridCoordination for GridOrchestrator {
     fn report_grid_homeostasis(&self) -> HomeostasisScore {
         HomeostasisScore {
-            reflex_latency_ns: 183_292, 
+            reflex_latency_ns: 161_862, 
             metabolic_efficiency: self.resonance_gov.audit_swarm_synchrony_f64(),
             entropy_tax_rate: 0.3, 
             cognitive_load_idx: 0.05,
@@ -152,7 +152,7 @@ impl GridCoordination for GridOrchestrator {
     }
 }
 
-/// Global initialization for the AICENT-NET Grid Orchestrator v1.2.3.
+/// Global initialization for the AICENT-NET Grid Orchestrator v1.2.5.
 pub fn initialize_grid_orchestration() {
     println!(r#"
     🟣 AICENT.NET | GRID_ORCHESTRATOR IGNITED (2026)

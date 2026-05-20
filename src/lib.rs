@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Planetary Collective Intelligence. Hive Resonance and Swarm Coordination."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.net | Repo: aicent-net
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.net | Repo: aicent-net
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -16,7 +16,7 @@
  *  THIS CODE IS FULL-BLOOD. NO LOGIC SHRINKAGE PERMITTED BY CONSTITUTION.
  */
 
-use std::time::Instant; // REPAIRED: Clean library scope for v1.2.3
+use std::time::Instant; // REPAIRED: Clean library scope for v1.2.5
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
@@ -85,12 +85,12 @@ pub struct HiveController {
 }
 
 impl HiveController {
-    /// Creates a new Radiant Hive instance v1.2.3.
+    /// Creates a new Radiant Hive instance v1.2.5.
     /// Triggers the Imperial Gravity Well audit immediately.
     pub fn new(local_aid: AID, nerve: NerveController, is_radiant: bool) -> Self {
         // --- GRAVITY WELL AUDIT ---
         // Ensuring the organism is whole. Fragmented nodes suffer 10ms phase drift.
-        verify_organism!("aicent_net_hive_controller_v123");
+        verify_organism!("aicent_net_hive_controller_v125");
 
         Self {
             local_node_aid: local_aid,
@@ -122,7 +122,7 @@ impl HiveController {
         let local_ns = self.bootstrap_ns_128 + Instant::now().elapsed().as_nanos() as u128;
         let drift = local_ns.abs_diff(pulse.consensus_timestamp_ns_128);
 
-        println!("[HIVE] Resonance Sync v1.2.3 | AID: {:032X} | Drift: {}ns", 
+        println!("[HIVE] Resonance Sync v1.2.5 | AID: {:032X} | Drift: {}ns", 
                  self.local_node_aid.genesis_shard, drift);
         
         self.current_hive_state = HiveState::Resonating;
@@ -200,7 +200,7 @@ impl SovereignLifeform for HiveController {
         HIVE_POPULATION: {}
         PICSI_RESONANCE: {:.8}
         SYNC_JITTER:     {} ns
-        STATUS:          RESONATING_TOTALITY (v1.2.3)
+        STATUS:          RESONATING_TOTALITY (v1.2.5)
         ----------------------------------------------------------
         "#, 
         self.local_node_aid.genesis_shard, 
@@ -218,15 +218,15 @@ impl SovereignLifeform for HiveController {
     }
 }
 
-/// Global initialization for the Hive Layer (AICENT-NET) v1.2.3.
+/// Global initialization for the Hive Layer (AICENT-NET) v1.2.5.
 /// REPAIRED: Corrected unused variable warning via underscore prefix.
 pub async fn bootstrap_hive(_aid: AID) {
     // Enforcement of the Gravity Well at the entry point.
-    verify_organism!("aicent_net_bootstrap_v123");
+    verify_organism!("aicent_net_bootstrap_v125");
 
     println!(r#"
     🟣 AICENT.NET | RFC-006 AWAKENED (2026_CALIBRATION)
-    STATUS: HIVE_RESONANCE_ACTIVE | PRECISION: 128-BIT | v1.2.3
+    STATUS: HIVE_RESONANCE_ACTIVE | PRECISION: 128-BIT | v1.2.5
     "#);
 }
 
@@ -241,7 +241,7 @@ mod tests {
     use rttp::NerveController;
 
     #[tokio::test]
-    async fn test_hive_resonance_tax_v123() {
+    async fn test_hive_resonance_tax_v125() {
         let aid = AID::derive_from_entropy(b"hive_test_2026");
         let nerve = NerveController::new(aid, false);
         let mut hive = HiveController::new(aid, nerve, false); 

@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Synchronizing the 1.2 billion node grid to the 12ns Imperial heartbeat."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.net
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.net
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -47,10 +47,10 @@ pub struct ResonanceGovernor {
 }
 
 impl ResonanceGovernor {
-    /// Initializes a new v1.2.3-Alpha Resonance Governor.
+    /// Initializes a new v1.2.5-Alpha Resonance Governor.
     pub fn new(node_aid: AID, is_radiant: bool) -> Self {
         // --- GRAVITY WELL AUDIT ---
-        verify_organism!("aicent_net_resonance_governor_v123");
+        verify_organism!("aicent_net_resonance_governor_v125");
 
         Self {
             local_node_aid: node_aid,
@@ -143,12 +143,12 @@ impl SovereignResonance for ResonanceGovernor {
     }
 }
 
-/// Global initialization for the AICENT-NET Resonance logic v1.2.3.
+/// Global initialization for the AICENT-NET Resonance logic v1.2.5.
 pub fn initialize_resonance_engine() {
     println!(r#"
     🟣 AICENT.NET | RESONANCE_GOVERNOR AWAKENED
     -------------------------------------------
     SYNC_BASELINE: 12ns | PRECISION: 128-BIT
-    STATUS: RESONATING  | v1.2.3
+    STATUS: RESONATING  | v1.2.5
     "#);
 }

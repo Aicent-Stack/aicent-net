@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Demonstrating Planetary Collective Resonance and 12ns Sync Jitter."
- *  Version: 1.2.3-Alpha | Domain: http://aicent.net | Repo: aicent-net
+ *  Version: 1.2.5-Alpha | Domain: http://aicent.net | Repo: aicent-net
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -25,7 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     
     // Enforcement of the Gravity Well
     // Standalone execution demonstrates the 10ms Resonance Phase Drift penalty.
-    verify_organism!("aicent_net_resonance_example_v123");
+    verify_organism!("aicent_net_resonance_example_v125");
     bootstrap_hive(node_aid).await;
 
     // 2. Initialize Dependencies
