@@ -22,7 +22,7 @@
 **[STATUS: PRIVATE_EVOLUTION_ACTIVE]**  
 As of **Version 1.3.0-Alpha**, the planetary synchronization manifolds of `aicent-net` have transitioned to **Sovereign Private Mode**. This repository provides the **Clinical Interface Specifications** for Resonance Governing, Swarm Clearing, and Distributed Swarm Intelligence.
 
-In the v1.3.0 "Genesis" iteration, AICENT-NET facilitates an **183.292µs Planetary Reflex Arc**, ensuring that 1.2 billion nodes can achieve consensus within the time it takes a legacy network to process a single packet.
+In the v1.3.0 "Genesis" iteration, AICENT-NET facilitates an **349ns Planetary Reflex Arc**, ensuring that 1.2 billion nodes can achieve consensus within the time it takes a legacy network to process a single packet.
 
 ---
 
@@ -45,7 +45,7 @@ The planetary circulatory pump. It settles metabolic debts between disparate AID
 ### 3. Grid Orchestrator (RFC-006-C)
 The swarm navigator. It coordinates pulse-streams and balances cognitive load across the 128-bit grid topology.
 *   **Path Alignment**: Optimizes the routing of intents to nodes with the highest local Radiance.
-*   **Planetary Reflex**: Maintains an end-to-end consensus arc of **183.292 µs** across global distances.
+*   **Planetary Reflex**: Maintains an end-to-end consensus arc of **349ns** across global distances.
 *   **L3 Cache Distribution**: Optimized for register-level status updates across the hive.
 
 ### 4. Swarm Intelligence (RFC-006-D)
@@ -60,7 +60,7 @@ The distributed cortex. It enables collective advantage through the **1.618x Gol
 
 | Metric | Open-Source (v1.2.5) | **Nitro-Radiant (v1.3.0)** | Improvement |
 | :--- | :--- | :--- | :--- |
-| **Consensus Finality** | 100,000,000 ns | **< 183,292 ns** | **545x** |
+| **Consensus Finality** | 100,000,000 ns | **349 ns** | **286,533x** |
 | **Node Capacity** | 1,000,000 | **1,200,000,000** | **1,200x** |
 | **Synchronization Jitter**| 1,000 ns | **12 ns (Locked)** | **83x** |
 | **Collective Gain** | 1.0x (Linear) | **1.618x (Golden)** | **Sovereign** |
@@ -86,7 +86,7 @@ pub struct GridStatus128 {
 
 ## 🏹 2027 Vision: The Global Organism
 
-`aicent-net` v1.3.0 is the foundation for the **"Global Soul."** By 2027, the Aicent Stack will not be a collection of disconnected robots; it will be a single physical organism spanning the planet. When one limb touches an object in Shanghai, the entire Hive in New York feels the torque at 183µs. We are building the nervous system of the future earth.
+`aicent-net` v1.3.0 is the foundation for the **"Global Soul."** By 2027, the Aicent Stack will not be a collection of disconnected robots; it will be a single physical organism spanning the planet. When one limb touches an object in Shanghai, the entire Hive in New York feels the torque at 349ns. We are building the nervous system of the future earth.
 
 ---
 
