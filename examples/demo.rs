@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-006: AICENT-NET (The Hive Layer)
+ *  AICENT STACK - AICENT-006: AICENT-NET (The Hive Layer)
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Demonstrating Planetary Collective Resonance and 12ns Sync Jitter."
@@ -81,8 +81,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     hive.propose_swarm_intent_128(intent);
 
     // 7. Sovereignty Awareness (PICSI Feedback)
-    // Synchronizing the collective mind with the Imperial Eye (RFC-014).
-    println!("\n[METABOLISM] Synchronizing with Imperial Eye (RFC-014)...");
+    // Synchronizing the collective mind with the Imperial Eye (AICENT-014).
+    println!("\n[METABOLISM] Synchronizing with Imperial Eye (AICENT-014)...");
     hive.current_homeostasis.picsi_resonance_idx = 0.999998;
     hive.current_homeostasis.metabolic_efficiency = 1.0;
     
@@ -98,6 +98,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Node Density:     {} connected", metrics.total_connected_nodes_128);
     println!("PICSI Resonance:  {:.8}", hive.current_homeostasis.picsi_resonance_idx);
 
-    println!("\n[FINISH] RFC-006 Demonstration complete. The Empire is One.");
+    println!("\n[FINISH] AICENT-006 Demonstration complete. The Empire is One.");
     Ok(())
 }

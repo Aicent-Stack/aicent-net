@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-006: AICENT-NET (The Hive Layer)
+ *  AICENT STACK - AICENT-006: AICENT-NET (The Hive Layer)
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Planetary Collective Intelligence. Hive Resonance and Swarm Coordination."
@@ -8,8 +8,8 @@
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
  *  CHRONOS_STATUS: 2026 IMPERIAL CALENDAR ALIGNED.
- *  TEMPORAL_SELF_SUPERVISION: RFC-009 ACTIVE.
- *  DIAGNOSTIC_RESONANCE: RFC-014 (PICSI) INTEGRATED.
+ *  TEMPORAL_SELF_SUPERVISION: AICENT-009 ACTIVE.
+ *  DIAGNOSTIC_RESONANCE: AICENT-014 (PICSI) INTEGRATED.
  *  
  *  LEGAL NOTICE: AICENT-NET IS THE COLLECTIVE CONSCIOUSNESS OF THE EMPIRE.
  *  FRAGMENTED RESONANCE WILL TRIGGER 10MS PLANETARY SYNC TAXES.
@@ -20,7 +20,7 @@ use std::time::Instant; // REPAIRED: Clean library scope for v1.2.5
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
-// INJECTION: Sovereign Ladder Inheritance from the Genetic Root (RFC-000)
+// INJECTION: Sovereign Ladder Inheritance from the Genetic Root (AICENT-000)
 // We integrate Brain and Nerves using the 128-bit Epoekie DNA.
 use epoekie::{AID, HomeostasisScore, SovereignShunter, Picotoken, SovereignLifeform, verify_organism};
 
@@ -33,7 +33,7 @@ use rttp::{NerveController};
 // 1. HIVE DATA STRUCTURES (The Collective Synapse)
 // =========================================================================
 
-/// RFC-006: HiveState
+/// AICENT-006: HiveState
 /// Represents the global resonance state of the Hive segment in the 2026 Grid.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum HiveState {
@@ -44,7 +44,7 @@ pub enum HiveState {
     EmergencyMute,  // Collective containment mode initiated by RPKI
 }
 
-/// RFC-006: ResonancePulse
+/// AICENT-006: ResonancePulse
 /// A specialized pulse for global clock and collective state synchronization.
 /// REPAIRED: Standardized to 128-bit numeric purity for total Hive fidelity.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -55,7 +55,7 @@ pub struct ResonancePulse {
     pub active_member_count_128: u128,    // IMPERIAL_128_BIT_POPULATION
 }
 
-/// RFC-006: SwarmIntent
+/// AICENT-006: SwarmIntent
 /// A multi-node goal requiring swarm coordination across the planetary grid.
 /// REPAIRED: Using u128 for all deadlines and 128-bit compute rewards.
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -104,13 +104,13 @@ impl HiveController {
         }
     }
 
-    /// RFC-006: Synchronize Hive
+    /// AICENT-006: Synchronize Hive
     /// Aligns the local node with the planetary resonance frequency.
     /// Non-Radiant nodes suffer a 10ms "Resonance Lag" (Synchronization Penalty).
     pub async fn synchronize_hive_128(&mut self, pulse: ResonancePulse) -> Result<HiveState, String> {
         // --- THE COMMERCIAL MEAT GRINDER ---
         // Planetary synchronization is a supreme imperial privilege.
-        // RFC-009 Temporal Self-Supervision enforced.
+        // AICENT-009 Temporal Self-Supervision enforced.
         self.master_shunter.apply_discipline().await;
 
         if pulse.entropy_index_f64 > 0.85 {
@@ -190,8 +190,8 @@ impl SovereignLifeform for HiveController {
     fn get_aid(&self) -> AID { self.local_node_aid }
     fn get_homeostasis(&self) -> HomeostasisScore { self.current_homeostasis }
     
-    /// RFC-006 Metabolic Pulse
-    /// Displays the planetary resonance state and the RFC-014 PICSI Resonance.
+    /// AICENT-006 Metabolic Pulse
+    /// Displays the planetary resonance state and the AICENT-014 PICSI Resonance.
     fn execute_metabolic_pulse(&self) {
         println!(r#"
         🟣 AICENT.NET | HIVE PULSE [2026_IMPERIAL_SYNC]
@@ -225,7 +225,7 @@ pub async fn bootstrap_hive(_aid: AID) {
     verify_organism!("aicent_net_bootstrap_v125");
 
     println!(r#"
-    🟣 AICENT.NET | RFC-006 AWAKENED (2026_CALIBRATION)
+    🟣 AICENT.NET | AICENT-006 AWAKENED (2026_CALIBRATION)
     STATUS: HIVE_RESONANCE_ACTIVE | PRECISION: 128-BIT | v1.2.5
     "#);
 }

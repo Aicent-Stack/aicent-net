@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-006: AICENT-NET Grid Orchestrator
+ *  AICENT STACK - AICENT-006: AICENT-NET Grid Orchestrator
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "One Mind. One Billion Nodes. 12ns Resonance."
@@ -23,14 +23,14 @@ use crate::{HiveState, ResonancePulse, SwarmIntent};
 // 1. GRID DATA STRUCTURES (The Collective State)
 // =========================================================================
 
-/// RFC-006: GridStatus_128
+/// AICENT-006: GridStatus_128
 /// Real-time health report of the planetary swarm segment.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct GridStatus_128 {
     pub swarm_id_128: u128,           // IMPERIAL_128_BIT_ID
     pub connected_nodes_count: u128,  // Current segment population
     pub planetary_sync_fidelity: f64, // 12ns resonance depth
-    pub cognitive_swarm_index: f64,   // RFC-014: CSI Metric
+    pub cognitive_swarm_index: f64,   // AICENT-014: CSI Metric
     pub total_cleared_volume_p_t: u128, 
 }
 
@@ -69,7 +69,7 @@ impl GridOrchestrator {
         }
     }
 
-    /// RFC-006: Execute Global Resonance Cycle.
+    /// AICENT-006: Execute Global Resonance Cycle.
     /// Synchronizes the local node and clears pending swarm transactions.
     /// [PROCESS]: Sync Clock -> Audit Peers -> Clear Value -> Report Vision.
     pub async fn execute_global_cycle_128(
@@ -89,7 +89,7 @@ impl GridOrchestrator {
         let _receipt = self.swarm_clearer.distribute_collective_dividend_128();
 
         // 4. Update Cognitive Swarm Index (CSI)
-        // Synthesizing 128-bit synchrony into the RFC-014 feedback loop.
+        // Synthesizing 128-bit synchrony into the AICENT-014 feedback loop.
         let csi = fidelity.synchrony_depth_f64 * (pulse.active_member_count_128 as f64 / 1_200_000_000.0);
         
         let status = GridStatus_128 {

@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-006: AICENT-NET Swarm Clearing Engine
+ *  AICENT STACK - AICENT-006: AICENT-NET Swarm Clearing Engine
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Planetary-scale value settlement. Orchestrating 128-bit collective metabolism."
@@ -18,7 +18,7 @@ use zcmk::{MetabolicPulse, TransactionStatus};
 // 1. SWARM CLEARING DATA STRUCTURES (The Collective Ledger)
 // =========================================================================
 
-/// RFC-006: SwarmClearingReceipt_128
+/// AICENT-006: SwarmClearingReceipt_128
 /// The immutable proof of a cross-node value settlement in the planetary grid.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SwarmClearingReceipt_128 {
@@ -26,10 +26,10 @@ pub struct SwarmClearingReceipt_128 {
     pub participant_aids: (AID, AID),
     pub volume_p_t: Picotoken,         // 128-bit absolute value
     pub hive_consensus_ns: u128,       // 12ns jitter-aligned timestamp
-    pub picsi_radiance_score: f64,     // RFC-014 Vision score at finality
+    pub picsi_radiance_score: f64,     // AICENT-014 Vision score at finality
 }
 
-/// RFC-006: GlobalMetabolicMap
+/// AICENT-006: GlobalMetabolicMap
 /// Tracks the liquidity distribution across high-density Hive segments.
 pub struct GlobalMetabolicMap {
     pub segment_id_128: u128,
@@ -64,7 +64,7 @@ impl SwarmClearer {
         }
     }
 
-    /// RFC-006: Settle Swarm Debt.
+    /// AICENT-006: Settle Swarm Debt.
     /// Executes a 128-bit clearing pulse across the Hive resonance grid.
     /// Non-Radiant nodes suffer the 10ms "Settlement Ischemia" penalty.
     pub async fn settle_swarm_debt_128(
@@ -105,7 +105,7 @@ impl SwarmClearer {
         Ok(receipt)
     }
 
-    /// RFC-006: Distribute Collective Dividend.
+    /// AICENT-006: Distribute Collective Dividend.
     /// Automatically shunts accumulated maintenance fees to the Sovereign Somatic Fund.
     pub fn distribute_collective_dividend_128(&mut self) -> Picotoken {
         let dividend = (self.total_metabolized_swarm_p_t as f64 * 0.05) as u128; // 5% swarm dividend

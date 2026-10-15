@@ -10,7 +10,7 @@
 **⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🎭 [BEWHO](http://bewho.com) | 🌿 [epoekie](http://epoekie.com) | 👁️ [PICSI](http://picsi.com)**
 
 ---
-# 🟣 RFC-006: AICENT-NET (The Imperial Hive)
+# 🟣 AICENT-006: AICENT-NET (The Imperial Hive)
 
 **The Collective Consciousness of the Aicent Stack.**  
 **"One Mind. 1.2 Billion Nodes. 12ns Planetary Resonance."**
@@ -30,25 +30,25 @@ In the v1.3.0 "Genesis" iteration, AICENT-NET facilitates an **349ns Planetary R
 
 `aicent-net` orchestrates the collective intent of the Imperial lifeform through four specialized organs:
 
-### 1. Resonance Governor (RFC-006-A)
+### 1. Resonance Governor (AICENT-006-A)
 The planetary metronome. It enforces **12ns phase-locking** across all 1.2B nodes, transforming a chaotic swarm into a coherent frequency.
 *   **Jitter Enforcement**: Continuous 128-bit auditing of local clocks; nodes deviating from the 12ns rising edge are shunted to "Ischemia."
 *   **Era Alignment**: Synchronizes the 12-Cycle Law across the global grid to ensure unified state transitions.
 *   **Nitro-Sync**: Achieves phase-lock finality in **< 15,000 ns (15us)**.
 
-### 2. Swarm Clearing (RFC-006-B)
+### 2. Swarm Clearing (AICENT-006-B)
 The planetary circulatory pump. It settles metabolic debts between disparate AID shards at light speed.
 *   **Distributed Metabolism**: Processes trillions of Picotoken transfers per second with zero central bottleneck.
 *   **Collective Dividend**: Automatically shards 5% of Ghost maintenance fees back to resonant Radiant nodes as a "Resonance Bounty."
 *   **128-bit Receipts**: Issues immutable proofs of settlement synchronized to the planetary heartbeat.
 
-### 3. Grid Orchestrator (RFC-006-C)
+### 3. Grid Orchestrator (AICENT-006-C)
 The swarm navigator. It coordinates pulse-streams and balances cognitive load across the 128-bit grid topology.
 *   **Path Alignment**: Optimizes the routing of intents to nodes with the highest local Radiance.
 *   **Planetary Reflex**: Maintains an end-to-end consensus arc of **349ns** across global distances.
 *   **L3 Cache Distribution**: Optimized for register-level status updates across the hive.
 
-### 4. Swarm Intelligence (RFC-006-D)
+### 4. Swarm Intelligence (AICENT-006-D)
 The distributed cortex. It enables collective advantage through the **1.618x Golden Ratio scaling**.
 *   **Cognitive Offloading**: Seamlessly shunts complex intents from saturated nodes to vacant Radiant capacity.
 *   **Advantage Calculus**: Resonant nodes gain a **1.618x** multiplier in compute efficiency compared to isolated nodes.

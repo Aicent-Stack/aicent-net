@@ -1,5 +1,5 @@
 /*
- *  AICENT STACK - RFC-006: AICENT-NET Planetary Resonance Controller
+ *  AICENT STACK - AICENT-006: AICENT-NET Planetary Resonance Controller
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Synchronizing the 1.2 billion node grid to the 12ns Imperial heartbeat."
@@ -19,7 +19,7 @@ use crate::{ResonancePulse, HiveState};
 // 1. RESONANCE DATA STRUCTURES (The Temporal Manifold)
 // =========================================================================
 
-/// RFC-006: ResonanceFidelity_128
+/// AICENT-006: ResonanceFidelity_128
 /// Represents the precision of the local node's alignment with the Hive.
 /// Aligned to 128-bit boundaries to ensure zero-latency comparison.
 #[derive(Debug, Clone, Copy, Serialize, Deserialize)]
@@ -27,7 +27,7 @@ pub struct ResonanceFidelity_128 {
     pub local_drift_ns: u128,         // Target: < 12ns
     pub hive_consensus_ns: u128,      // 128-bit global master clock
     pub synchrony_depth_f64: f64,     // 0.0 to 1.0 (Imperial Precision)
-    pub picsi_csi_snapshot: f64,      // RFC-014: Cognitive Swarm Index
+    pub picsi_csi_snapshot: f64,      // AICENT-014: Cognitive Swarm Index
 }
 
 // =========================================================================
@@ -62,7 +62,7 @@ impl ResonanceGovernor {
         }
     }
 
-    /// RFC-006: Synchronize with Hive 128.
+    /// AICENT-006: Synchronize with Hive 128.
     /// Aligns the local 128-bit clock with the incoming planetary pulse.
     /// Non-Radiant nodes suffer the 10ms "Phase Lag" during synchronization.
     pub async fn synchronize_with_hive_128(
